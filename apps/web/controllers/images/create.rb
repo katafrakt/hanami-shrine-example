@@ -8,7 +8,7 @@ module Web::Controllers::Images
       uploaded_file = uploader.upload(::File.open(tempfile))
 
       image = Image.new
-      image.title = params.get('image.title')
+      image.title = params['title']
       image.url = uploaded_file.url
 
       ImageRepository.create(image)

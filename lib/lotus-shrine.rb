@@ -33,8 +33,9 @@ Lotus::Model.configure do
       entity Image
       repository ImageRepository
 
+      attribute :id,    Integer
       attribute :title, String
-      attribute :url, String
+      attribute :url,   String
     end
 
     # collection :users do
