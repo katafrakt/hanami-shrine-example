@@ -1,5 +1,5 @@
 <ul>
 <% images.each do |image| %>
-  <li><a href="/images/<%= image.id %>"><%= image.title || image.url %></a></li>
+  <li><a href="/images/<%= image.id %>"><%= image.title || image.image_url %></a></li>
 <% end %>
 </ul>

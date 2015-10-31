@@ -1,4 +1,6 @@
 class Image
   include Lotus::Entity
-  attributes :title, :url
+  include Shrine[:image]
+  
+  attributes :title, :image_data
 end

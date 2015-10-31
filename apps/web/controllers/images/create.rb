@@ -4,12 +4,12 @@ module Web::Controllers::Images
 
     def call(params)
       tempfile = params['image']['tempfile']
-      uploader = Shrine.new(:file_system)
-      uploaded_file = uploader.upload(::File.open(tempfile))
+      #uploader = Shrine.new(:file_system)
+      #uploaded_file = uploader.upload(::File.open(tempfile))
 
       image = Image.new
       image.title = params['title']
-      image.url = uploaded_file.url
+      image.image = ::File.open(tempfile)
 
       ImageRepository.create(image)
     end

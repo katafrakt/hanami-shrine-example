@@ -1,4 +1,5 @@
 require 'lotus/model'
+require_relative 'lotus-shrine/lotus_shrine_repository'
 Dir["#{ __dir__ }/lotus-shrine/**/*.rb"].each { |file| require_relative file }
 
 Lotus::Model.configure do
@@ -15,7 +16,7 @@ Lotus::Model.configure do
   #    adapter type: :sql, uri: 'postgres://localhost/lotus-shrine_development'
   #    adapter type: :sql, uri: 'mysql://localhost/lotus-shrine_development'
   #
-  adapter type: :file_system, uri: ENV['LOTUS_SHRINE_DATABASE_URL']
+  adapter type: :sql, uri: ENV['LOTUS_SHRINE_DATABASE_URL']
 
   ##
   # Database mapping
@@ -33,9 +34,9 @@ Lotus::Model.configure do
       entity Image
       repository ImageRepository
 
-      attribute :id,    Integer
-      attribute :title, String
-      attribute :url,   String
+      attribute :id,          Integer
+      attribute :title,       String
+      attribute :image_data,  String
     end
 
     # collection :users do
