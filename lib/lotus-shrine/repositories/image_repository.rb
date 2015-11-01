@@ -1,4 +1,4 @@
 class ImageRepository
   include Lotus::Repository
-  extend Lotus::ShrineRepository[:image]
+  include Lotus::Shrine::Repository[:image]
 end
