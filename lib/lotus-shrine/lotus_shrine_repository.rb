@@ -24,6 +24,37 @@ module Lotus
 
                 super
               end
+
+              def update(entity)
+                method_name = "#{attachment_name}_attacher".to_sym
+
+                entity.public_send(method_name).save
+                entity.public_send(method_name).replace
+                entity.public_send(method_name)._promote
+
+                super
+              end
+
+              def persist(entity)
+                method_name = "#{attachment_name}_attacher".to_sym
+
+                entity.public_send(method_name).save
+                entity.public_send(method_name).replace
+                entity.public_send(method_name)._promote
+
+                super
+              end
+
+              def delete(entity)
+                super
+
+                method_name = "#{attachment_name}_attacher".to_sym
+                begin
+                  entity.public_send(method_name).destroy
+                rescue Errno::ENOENT
+                  # no-op - should I do something?
+                end
+              end
             end
           RUBY
         end

@@ -1,1 +1,1 @@
-resources :images, only: [:new, :create, :show, :index]
+resources :images, only: [:new, :create, :show, :index, :destroy]

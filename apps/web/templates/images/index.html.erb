@@ -1,3 +1,5 @@
+<%= link_to 'Add image', routes.new_image_path %>
+
 <ul>
 <% images.each do |image| %>
   <li><a href="/images/<%= image.id %>"><%= image.title || image.image_url %></a></li>
