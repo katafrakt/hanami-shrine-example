@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/katafrakt/lotus-shrine.git
+  revision: 4d57977b63ddbedf650d33814a6be63a3576c036
+  specs:
+    lotus-shrine (0.1.0)
+      lotus-model
+      shrine
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,6 +76,7 @@ DEPENDENCIES
   bundler
   capybara
   lotus-model (~> 0.4)
+  lotus-shrine!
   lotusrb (= 0.4.1)
   minitest
   pg

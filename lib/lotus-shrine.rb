@@ -1,5 +1,5 @@
 require 'lotus/model'
-require_relative 'lotus-shrine/lotus_shrine_repository'
+require 'lotus/shrine'
 Dir["#{ __dir__ }/lotus-shrine/**/*.rb"].each { |file| require_relative file }
 
 Lotus::Model.configure do
