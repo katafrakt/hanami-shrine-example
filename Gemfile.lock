@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/katafrakt/lotus-shrine.git
-  revision: 4d57977b63ddbedf650d33814a6be63a3576c036
+  revision: f04e4ecf2345696cb7b801f24be5ef083b0df336
   specs:
     lotus-shrine (0.1.0)
       lotus-model

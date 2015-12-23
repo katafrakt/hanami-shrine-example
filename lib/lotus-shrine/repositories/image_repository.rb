@@ -1,4 +1,6 @@
+require_relative '../image_uploader'
+
 class ImageRepository
   include Lotus::Repository
-  include Lotus::Shrine::Repository[:image]
+  extend ImageUploader.repository(:image)
 end
