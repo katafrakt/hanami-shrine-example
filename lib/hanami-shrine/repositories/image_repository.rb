@@ -1,6 +1,6 @@
 require_relative '../image_uploader'
 
 class ImageRepository
-  include Lotus::Repository
+  include Hanami::Repository
   extend ImageUploader.repository(:image)
 end

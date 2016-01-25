@@ -3,11 +3,12 @@ source 'https://rubygems.org'
 gem 'bundler'
 gem 'rake'
 
-gem 'lotusrb',       '0.4.1'
-gem 'lotus-model',   '~> 0.4'
+gem 'hanami',       '0.7.0'
+gem 'hanami-model',   '~> 0.6'
+gem 'hanami-assets'
 gem 'pg'
 gem 'shrine'
-gem 'lotus-shrine', github: 'katafrakt/lotus-shrine'
+gem 'hanami-shrine'
 
 group :test do
   gem 'minitest'

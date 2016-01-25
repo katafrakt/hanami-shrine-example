@@ -1,20 +1,20 @@
-require 'lotus/model'
-require 'lotus/shrine'
-Dir["#{ __dir__ }/lotus-shrine/**/*.rb"].each { |file| require_relative file }
+require 'hanami/model'
+require 'hanami/shrine'
+Dir["#{ __dir__ }/hanami-shrine/**/*.rb"].each { |file| require_relative file }
 
-Lotus::Model.configure do
+Hanami::Model.configure do
   ##
   # Database adapter
   #
   # Available options:
   #
   #  * Memory adapter
-  #    adapter type: :memory, uri: 'memory://localhost/lotus-shrine_development'
+  #    adapter type: :memory, uri: 'memory://localhost/hanami-shrine_development'
   #
   #  * SQL adapter
-  #    adapter type: :sql, uri: 'sqlite://db/lotus-shrine_development.sqlite3'
-  #    adapter type: :sql, uri: 'postgres://localhost/lotus-shrine_development'
-  #    adapter type: :sql, uri: 'mysql://localhost/lotus-shrine_development'
+  #    adapter type: :sql, uri: 'sqlite://db/hanami-shrine_development.sqlite3'
+  #    adapter type: :sql, uri: 'postgres://localhost/hanami-shrine_development'
+  #    adapter type: :sql, uri: 'mysql://localhost/hanami-shrine_development'
   #
   adapter type: :sql, uri: ENV['LOTUS_SHRINE_DATABASE_URL']
 

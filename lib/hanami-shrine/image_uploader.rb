@@ -3,9 +3,9 @@ require 'shrine/storage/file_system'
 
 Shrine.storages = {
   cache: Shrine::Storage::FileSystem.new(Dir.tmpdir),
-  store: Shrine::Storage::FileSystem.new("apps/web/public", subdirectory: "uploads")
+  store: Shrine::Storage::FileSystem.new("public", subdirectory: "uploads")
 }
 
 class ImageUploader < Shrine
-  plugin :lotus, validations: true
+  plugin :hanami, validations: true
 end

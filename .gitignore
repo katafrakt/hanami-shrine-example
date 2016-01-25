@@ -1,3 +1,4 @@
-/db/lotus-shrine_development
-/db/lotus-shrine_test
+/db/hanami-shrine_development
+/db/hanami-shrine_test
+/public/uploads
 .env*
