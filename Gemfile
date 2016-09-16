@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'bundler'
 gem 'rake'
 
-gem 'hanami',       '0.7.0'
+gem 'hanami',       '0.8.0'
 gem 'hanami-model',   '~> 0.6'
 gem 'hanami-assets'
 gem 'pg'
@@ -17,4 +17,8 @@ end
 
 group :production do
   # gem 'puma'
+end
+
+group :development do
+  gem 'shotgun'
 end

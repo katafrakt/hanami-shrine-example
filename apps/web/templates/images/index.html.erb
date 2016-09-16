@@ -2,6 +2,6 @@
 
 <ul>
 <% images.each do |image| %>
-  <li><a href="/images/<%= image.id %>"><%= image.title || image.image_url %></a></li>
+  <li><a href="/images/<%= image.id %>"><%= image.title.to_s != '' ? image.title : image.image_url %></a></li>
 <% end %>
 </ul>

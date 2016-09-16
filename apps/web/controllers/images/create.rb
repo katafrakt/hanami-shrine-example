@@ -3,10 +3,10 @@ module Web::Controllers::Images
     include Web::Action
 
     def call(params)
-      tempfile = params['image']['tempfile']
+      tempfile = params[:image][:tempfile]
 
       image = Image.new
-      image.title = params['title']
+      image.title = params[:title]
       image.image = ::File.open(tempfile)
 
       image = ImageRepository.create(image)
