@@ -1,6 +1,5 @@
 require_relative '../image_uploader'
 
-class ImageRepository
-  include Hanami::Repository
-  extend ImageUploader.repository(:image)
+class ImageRepository < Hanami::Repository
+  prepend ImageUploader.repository(:image)
 end

@@ -1,4 +1,4 @@
-<form method="post" action="<%= Web::Routes.url(:images) %>" enctype="multipart/form-data">
+<form method="post" action="<%= routes.url(:images) %>" enctype="multipart/form-data">
   <p><input type="text" name="title" id="title" placeholder="Title" /></p>
   <p><input type="file" name="image" id="image" /></p>
   <p><input type="submit" value="Upload"></p>

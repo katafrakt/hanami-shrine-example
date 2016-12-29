@@ -5,7 +5,7 @@ module Web::Controllers::Images
     expose :image
 
     def call(params)
-      @image = ImageRepository.find(params[:id])
+      @image = ImageRepository.new.find(params[:id])
     end
   end
 end

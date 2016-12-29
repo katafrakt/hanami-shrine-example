@@ -5,11 +5,9 @@ module Web::Controllers::Images
     def call(params)
       tempfile = params[:image][:tempfile]
 
-      image = Image.new
-      image.title = params[:title]
-      image.image = ::File.open(tempfile)
+      image = Image.new(title: params[:title], image: ::File.open(tempfile))
 
-      image = ImageRepository.create(image)
+      image = ImageRepository.new.create(image)
 
       redirect_to routes.url(:image, image.id)
     end

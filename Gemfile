@@ -3,12 +3,12 @@ source 'https://rubygems.org'
 gem 'bundler'
 gem 'rake'
 
-gem 'hanami',       '0.8.0'
+gem 'hanami',       '~> 0.9'
 gem 'hanami-model',   '~> 0.6'
 gem 'hanami-assets'
 gem 'pg'
 gem 'shrine'
-gem 'hanami-shrine'
+gem 'hanami-shrine', github: 'katafrakt/hanami-shrine', branch: '0.9-support'
 
 group :test do
   gem 'minitest'

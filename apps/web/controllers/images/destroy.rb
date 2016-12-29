@@ -3,8 +3,7 @@ module Web::Controllers::Images
     include Web::Action
 
     def call(params)
-      image = ImageRepository.find(params[:id])
-      ImageRepository.delete(image)
+      ImageRepository.new.delete(params[:id])
       redirect_to routes.url(:images)
     end
   end
