@@ -1,6 +1,15 @@
 <h1><%= image.title %></h1>
 
-<img src="<%= image.image_url %>" />
+<img src="<%= image.image_url(:original) %>" />
+
+<h2>Large</h2>
+<img src="<%= image.image_url(:large) %>" />
+
+<h2>Medium</h2>
+<img src="<%= image.image_url(:medium) %>" />
+
+<h2>Small</h2>
+<img src="<%= image.image_url(:small) %>" />
 
 <p>
   <%= form_for :image, routes.image_path(id: image.id), method: :delete, values: {image: image} do
