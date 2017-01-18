@@ -9,5 +9,8 @@ Hanami.configure do
 
   model do
     adapter :sql, ENV['LOTUS_SHRINE_DATABASE_URL']
+
+    migrations 'db/migrations'
+    schema     'db/schema.sql'
   end
 end
