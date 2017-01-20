@@ -8,7 +8,7 @@ gem 'hanami-model',   '~> 0.6'
 gem 'hanami-assets'
 gem 'pg'
 gem 'shrine'
-gem 'hanami-shrine', github: 'katafrakt/hanami-shrine'
+gem 'hanami-shrine', '0.2.1'
 gem 'image_processing'
 gem "mini_magick", ">= 4.3.5"
 
